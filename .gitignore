@@ -1,0 +1,10 @@
+# Ignore everything at the top level...
+/*
+
+# ...except these
+!/.gitignore
+!/nvim/
+!/oh-my-posh/
+
+# Never track macOS metadata, even inside allowed folders
+.DS_Store
