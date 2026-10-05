@@ -6,8 +6,15 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
+local platform = require("config.platform")
+
 vim.g.mapleader = " "
-vim.g.node_host_prog = vim.fn.expand("~/.nvm/versions/node/v24.14.1/bin/node")
+vim.g.node_host_prog = platform.node()
+
+-- Use PowerShell for :!, :terminal, etc. instead of cmd.exe
+if platform.is_win then
+  LazyVim.terminal.setup("pwsh")
+end
 
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"

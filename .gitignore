@@ -3,6 +3,7 @@
 
 # ...except these
 !/.gitignore
+!/.gitattributes
 !/nvim/
 !/oh-my-posh/
 
